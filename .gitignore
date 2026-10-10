@@ -1,0 +1,28 @@
+# 依赖与构建产物
+node_modules/
+dist/
+
+# 本机工具链（Node/Python 可执行文件，几百 MB，不属于源码）
+.toolchain/
+
+# Python 侧车的本地环境与缓存
+sidecar/.venv/
+sidecar/plugin-env/
+__pycache__/
+*.py[cod]
+
+# 本地配置与密钥：NoneBot 的 .env、备份出来的 settings.json 都不能进仓库
+.env
+.env.*
+sidecar/plugins.json.bak
+settings*.json
+
+# 验证脚本的产物
+scratch/*.png
+
+# 编辑器与系统
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+npm-debug.log*

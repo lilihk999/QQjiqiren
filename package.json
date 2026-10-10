@@ -1,0 +1,32 @@
+{
+  "name": "qqbot-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "QQ 机器人桌面端：OneBot v11 接入 + NoneBot2 插件市场 + 自定义 OpenAI 兼容大模型",
+  "main": "dist/main/index.cjs",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build": "node scripts/build.mjs",
+    "start": "npm run build && electron .",
+    "test": "node --experimental-transform-types --test-timeout=30000 --test \"test/**/*.test.ts\""
+  },
+  "dependencies": {
+    "@types/ws": "^8.18.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "electron": "44.7.0",
+    "esbuild": "^0.28.1",
+    "typescript": "^5.9.3"
+  },
+  "allowScripts": {
+    "electron@44.7.0": true,
+    "esbuild@0.28.2": true
+  }
+}
